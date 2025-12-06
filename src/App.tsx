@@ -123,6 +123,10 @@ const parseCSV = (csvText: string): WordItem[] => {
 // === MAIN APPLICATION START ===
 
 export default function App() {
+    // ADD THESE THREE LINES:
+  const [activeTab, setActiveTab] = useState<'DEPLOY' | 'INTEL'>('DEPLOY');
+  const [showSettings, setShowSettings] = useState(false);
+  const [settingTab, setSettingTab] = useState<'duration' | 'speed'>('duration');
     // --- STATE MANAGEMENT ---
     const [phase, setPhase] = useState<GamePhase>('LOADING');
     const [isAudioInitialized, setIsAudioInitialized] = useState(false);
